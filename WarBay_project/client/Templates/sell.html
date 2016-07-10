@@ -1,0 +1,68 @@
+<template name="Sell">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Sell</h2>
+      <p>Public your game!</p>
+      <form role="form">
+        <div class="form-group">
+          <label>Game:</label>
+          <input type="text" class="form-control" name="namg_sell" placeholder="Description" required>
+          <label>Publish description:</label>
+          <input type="text" class="form-control" name="pubDesc" placeholder="Description" required>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label">Rating</label>
+          <div class="col-md-10">
+            <select class="input-large form-control" name="rate_ht">
+              <option value="">Select a rating</option>
+              <option value="evr">Everyone</option>
+              <option value="evr10">Everyone +10</option>
+              <option value="tn">Teen</option>
+              <option value="mat">Mature</option>
+              <option value="ado">Adults Only</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 control-label">Genre</label>
+          <div class="col-md-10">
+            <select class="input-large form-control" name="genre_ht">
+              <option value="">Select a genre</option>
+              <option value="act">Action</option>
+              <option value="adven">Adventure</option>
+              <option value="race">Racing</option>
+              <option value="spt">Sports</option>
+              <option value="strt">Strategy</option>
+              <option value="trr">Terror</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="text" class="form-control" name="email_ht" placeholder="Description" required>
+          <label>Phone:</label>
+          <input type="number" class="form-control" name="phone_ht" placeholder="Description" required>
+          <label>Price</label>
+          <input type="number" class="form-control" name="price_ht" placeholder="Description" required>
+        </div>
+
+        <div class="form-group is-empty is-fileinput">
+          <label for="inputFile" class="col-md-2 control-label">Image</label>
+          <div class="col-md-10">
+            <input type="text" name="imgdir_ht" readonly="" class="form-control" placeholder="Browse...">
+            <input type="file" id="inputFile" multiple="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-14 col-md-offset-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,64 @@
+<template name="Slideshow">
+  <body>
+    <label class="w3-center"><a class="navbar-brand" href="/"><label class="w3-allerta font-effect-brick-sign w3-xxxlarge">War</label><label class="w3-lobster w3-xxxlarge">Bay!</label></a></label>
+    <br><br>
+    <div class="w3-content w3-section" style="max-width:500px">
+      <img class="mySlides" src="images/overwatch.jpg" style="width:100%">
+      <img class="mySlides" src="images/zelda.png" style="width:100%">
+      <img class="mySlides" src="images/league.jpg" style="width:100%">
+    </div>
+  </body>
+</template>
+
+ <template name="Home">
+  <div class="container">
+    <div class="jumbotron">
+    <div class="logo" align="center">
+       <!-- <img src="images/logotipo.png"/> -->
+       {{>Slideshow}}<br><br>
+       <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+        </script>
+    </div>
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="col-sm-4 col-sm-offset-1 panel panel-primary">
+                 <div class="panel-heading">
+                   <h3 class="panel-title">Trending</h3>
+                 </div>
+                 <div class="panel-body">
+                   Panel content
+                   <br>
+                   <a href="javascript:void(0)" class="btn btn-raised btn-info">Info<div class="ripple-container"></div></a>
+                 </div>
+              </div>
+              <div class="col-sm-4 col-sm-offset-1 panel panel-primary">
+                 <div class="panel-heading">
+                   <h3 class="panel-title">Brand new</h3>
+                 </div>
+                 <div class="panel-body">
+                   Panel content
+                   <br>
+                   <a href="javascript:void(0)" class="btn btn-raised btn-info">Info<div class="ripple-container"></div></a>
+                 </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+</template>

@@ -1,0 +1,52 @@
+<template name="Advsrch">
+  <div class="well bs-component">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Advance Search</legend>
+        <div class="form-group is-empty">
+          <label class="col-md-2 control-label">Game</label>
+
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="inputName_as" placeholder="Name" requiered/>
+          </div>
+        </div>
+
+        <div class="form-group is-empty">
+          <label class="col-md-2 control-label">Genre</label>
+          <div class="col-md-10">
+            <select class="input-large form-control">
+              <option value="">Select a genre</option>
+              <option value="act">Action</option>
+              <option value="adv">Adventure</option>
+              <option value="race">Racing</option>
+              <option value="spt">Sports</option>
+              <option value="strt">Strategy</option>
+              <option value="trr">Terror</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group is-empty">
+          <label class="col-md-2 control-label">Rating</label>
+          <div class="col-md-10">
+            <select class="input-large form-control">
+              <option value="">Select a rating</option>
+              <option value="evr">Everyone</option>
+              <option value="evr10">Everyone +10</option>
+              <option value="tn">Teen</option>
+              <option value="mat">Mature</option>
+              <option value="ado">Adults Only</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-10 col-md-offset-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-default">Cancel</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</template>

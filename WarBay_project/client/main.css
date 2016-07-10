@@ -1,0 +1,14 @@
+/* CSS declarations go here */
+.w3-lobster {
+    font-family: "Lobster", Sans-serif;
+}
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}

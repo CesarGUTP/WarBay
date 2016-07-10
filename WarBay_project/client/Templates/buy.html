@@ -1,0 +1,31 @@
+<template name="Buy">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Search</h2>
+        <p>Find the game would you like!</p>
+        <form role="form">
+          <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr" placeholder="Game name" required>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Search <span class="caret"></span></button>
+
+            <button type="button" class="btn btn-primary" id="adv-js">
+              Advance search
+            </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><input class="btn btn-default" type="button" id="new-jsid" value="New"></li>
+                <li><input class="btn btn-default" type="button" id="used-jsid" value="Used"></li>
+              </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="advtemple" style="display: None">
+      {{>Advsrch}}
+    </div>
+  </div>
+</template>

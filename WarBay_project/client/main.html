@@ -1,0 +1,54 @@
+<head>
+  <title>WarBay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+</head>
+
+<template name="Navbar">
+  <div class="navbar navbar-light" style=background-color:#000;>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><label class="w3-allerta font-effect-brick-sign w3-xlarge">War</label><label class="w3-lobster w3-xlarge">Bay!</label></a>
+        <!-- <a class="navbar-brand" href="/">WarBay</a> -->
+      </div>
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/buy"><span class="glyphicon glyphicon-shopping-cart"></span>  Buy</a></li>
+          <li><a href="/sell"><span class="glyphicon glyphicon-bullhorn"></span>  Sell</a></li>
+          <!-- <li><a href="/categories"><span class="glyphicon glyphicon-list-alt"></span>  Categories</a></li> -->
+          <li><a href="/about"><span class="glyphicon glyphicon-certificate"></span>  About us</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control col-md-8" placeholder="Search" required/>
+            <span class="glyphicon glyphicon-search"></span>
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right" style=color:#d3d3d3;>
+        <li><a href="#">{{>loginButtons}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="Footer">
+  <nav class="navbar navbar-light navbar-bottom" role="navigation" align="center" style=background-color:#000;>
+  <div class="container">
+    <h5 style=color:#d1d1d1;>Copyright &copy; WarBay 2016; Ennio Díaz, Cesar Galvez</h5><hr>
+    <h5 style=color:#d1d1d1;>Follow Us</h5>
+    <a target="_new" href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary &via=username-here}">
+    <img style="background-color:#d1d1d1; border: 0pt none;" src="images/twitter.png" width="25" height="25" /></a>
+    <a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}&t={Title}{/block:Title}">
+    <img style="background-color:#d1d1d1; border: 0pt none;" src="images/facebook.png" width="25" height="25" /></a>
+    <br><br>
+  </div>
+</nav>
+</template>
