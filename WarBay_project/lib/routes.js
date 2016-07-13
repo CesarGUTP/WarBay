@@ -25,3 +25,28 @@ FlowRouter.route('/about', {
     BlazeLayout.render('MainLayout',{main: 'About'});
   }
 })
+
+FlowRouter.route('/cart', {
+  name: 'cart',
+  action(){
+    BlazeLayout.render('MainLayout',{main: 'Cart'});
+  }
+})
+
+FlowRouter.route('/gamesindex',
+{
+  name: 'gamesindex',
+  action()
+  {
+    BlazeLayout.render('MainLayout', {main: 'Gamesindex'});
+  }
+})
+
+FlowRouter.route('/checkout',
+{
+  name:'checkout',
+  action()
+  {
+    BlazeLayout.render('MainLayout', {main: 'Checkout'});
+  }
+})

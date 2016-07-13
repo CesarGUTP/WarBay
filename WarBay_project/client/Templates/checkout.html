@@ -1,0 +1,46 @@
+<template name="Checkout">
+  <div class="container">
+    <div class="jumbotron">
+      <table class="shopping-cart">
+    		<thead>
+    			<tr>
+    				<th scope="col"><h3><span class="glyphicon glyphicon-th-list"></span> Item</h3></th>
+    				<th scope="col"><h3><span class="glyphicon glyphicon-option-vertical"></span>Quantity</h3></th>
+    				<th scope="col"><h3><span class="glyphicon glyphicon-usd"></span>Price</h3></th>
+    			</tr>
+    		</thead>
+        <tbody>
+
+        </tbody>
+    	</table>
+      <form action="order.html" method="post" id="checkout-order-form">
+      	<h2>Your Details</h2>
+      		<fieldset id="fieldset-billing">
+      			<legend>Billing</legend>
+      <div class="form-group">
+        <h4>Name</h4>
+        <input type="text" class="form-control" name="name_check" placeholder="Name" required>
+        <h4>Email</h4>
+        <input type="text" class="form-control" name="email_check" placeholder="Email address" required>
+        <h4>City</h4>
+        <input type="text" class="form-control" name="city_check" placeholder="Email address" required>
+        <h4>Address</h4>
+        <input type="text" class="form-control" name="address_check" placeholder="Email address" required>
+      </div>
+
+      <div>
+      	<h4>Country</h4>
+      		<select name="country"  data-type="string">
+      			<option value="">Select</option>
+      			<option value="Pan">Panama</option>
+      			<option value="Us">United States</option>
+      		</select>
+      </div>
+      </fieldset>
+
+      <p><input type="submit" value="Submit" class="btn btn-raised btn-primary" /></p>
+
+      </form>
+    </div>
+  </div>
+</template>

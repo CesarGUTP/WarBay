@@ -1,0 +1,32 @@
+<template name="Navbar">
+  <div class="navbar navbar" style=background-color:#000;>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><label class="w3-allerta font-effect-brick-sign w3-xlarge">War</label><label class="w3-lobster w3-xlarge">Bay!</label></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/buy"><span class="glyphicon glyphicon-list-alt"></span>  Buy</a></li>
+          <li><a href="/sell"><span class="glyphicon glyphicon-bullhorn"></span>  Sell</a></li>
+          <li><a href="/about"><span class="glyphicon glyphicon-certificate"></span>  About us</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control col-md-8" placeholder="Search" required/>
+            <span class="glyphicon glyphicon-search"></span>
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right" style=color:#d3d3d3;>
+          <!-- <li id="addn" style="display: None"><a href="/addnew"><span class="glyphicon glyphicon-plus"></span> Add new</a></li> -->
+          <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a href="#">{{> loginButtons}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

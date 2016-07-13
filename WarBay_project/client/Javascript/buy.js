@@ -1,17 +1,19 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-// import './main.html';
 
 Template.Buy.events({
   'click #new-jsid': function(event){
     event.preventDefault();
     alert("Showing new games");
-    //Meteor.call();
+    var gname = event.target.usr.value;
+    Meteor.subscribe('pub_ug');
   },
   'click #used-jsid': function(event){
     event.preventDefault();
     alert("Showing used games");
+    var gname = event.target.usr.value;
+    Meteor.subscribe('pub_ug');
   },
   'click #adv-js': function(event)
   {
@@ -19,5 +21,3 @@ Template.Buy.events({
     $('#advtemple').toggle('show');
   },
 });
-
-//FALTA EL METEOR.CALL()

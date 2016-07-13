@@ -1,5 +1,5 @@
 {
-  "name": "WarBay_project",
+  "name": "WarBay_project1",
   "private": true,
   "scripts": {
     "start": "meteor run"

@@ -1,0 +1,23 @@
+<template name="Gamesindex">
+  <div class="container">
+    <div class="jumbotron">
+      <form class="col-sm-4 col-sm-10 panel panel-primary">
+         <div class="panel-heading">
+           <h3 class="panel-title">Game</h3> <!--Need a "for each" -->
+         </div>
+         <div class="panel-body">
+           {{#each new_games}}
+            {{_id}}
+            {{name}}
+           {{/each}}
+           {{#each usd_games}}
+            {{_id}}
+            {{name}}
+           {{/each}}
+           <br>
+           <input type="submit" class="btn btn-raised btn-info" value="Add to cart">
+         </div>
+      </form>
+    </div>
+  </div>
+</template>

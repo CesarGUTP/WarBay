@@ -3,10 +3,10 @@
     <div class="jumbotron">
       <h2>Sell</h2>
       <p>Public your game!</p>
-      <form role="form">
+      <form>
         <div class="form-group">
           <label>Game:</label>
-          <input type="text" class="form-control" name="namg_sell" placeholder="Description" required>
+          <input type="text" class="form-control" name="namg_sell" placeholder="Name" required>
           <label>Publish description:</label>
           <input type="text" class="form-control" name="pubDesc" placeholder="Description" required>
         </div>
@@ -42,11 +42,11 @@
 
         <div class="form-group">
           <label>Email:</label>
-          <input type="text" class="form-control" name="email_ht" placeholder="Description" required>
+          <input type="email" class="form-control" name="email_ht" placeholder="Email addres" required>
           <label>Phone:</label>
-          <input type="number" class="form-control" name="phone_ht" placeholder="Description" required>
+          <input type="number" class="form-control" name="phone_ht" size="8" pattern="[0-9]" placeholder="Phone number" required>
           <label>Price</label>
-          <input type="number" class="form-control" name="price_ht" placeholder="Description" required>
+          <input type="double" class="form-control" name="price_ht" size="1000.99" placeholder="Set a price" required>
         </div>
 
         <div class="form-group is-empty is-fileinput">
@@ -59,10 +59,11 @@
 
         <div class="form-group">
           <div class="col-md-14 col-md-offset-2">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit">
           </div>
         </div>
       </form>
     </div>
   </div>
+
 </template>
