@@ -12,3 +12,70 @@
 .hidden {
   display: none !important;
 }
+
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.col-xs-6, .col-sm-4, .col-md-3, .col-lg-2 {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.panel-default> .panel-heading {
+    background-color: none!important;
+}
+.panel-default> .panel-footer {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+
+.panel-body> .name {
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.col-xs-12, .col-sm-6, .col-md2, .col-lg-1 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+div.jumbotron.jumbotron-icon {
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 0px 0px 0px;
+}
+.info-icons {
+    vertical-align: middle;
+}
+#product_description{
+height: 170px;
+}
+.panel-footer> .promo-footer {
+    font-family: 'Source Sans Pro' !important;
+    font-size: 20px;
+    color: #666;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.promo-footer:hover {
+    color: #000000;
+}

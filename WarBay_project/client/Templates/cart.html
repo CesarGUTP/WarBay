@@ -5,29 +5,36 @@
   			<tr>
   				<th scope="col"><h3><span class="glyphicon glyphicon-th-list"></span> Item</h3></th>
   				<th scope="col"><h3><span class="glyphicon glyphicon-option-vertical"></span>Quantity</h3></th>
-  				<th scope="col"><h3><span class="glyphicon glyphicon-usd"></span>Price</h3></th>
   			</tr>
   		</thead>
       <tbody>
-        
+        {{#each items}}
+            <tr>
+              <td data-id="{{_id}}">{{item.title}}</td>
+              <td>{{amount}}</td>
+            </tr>
+          {{/each}}
       </tbody>
   	</table>
   	<p>
-  		<h3>Sub Total:</h3> <span class="glyphicon glyphicon-usd"></span> <label id="sub-t" value=""></label>
+  		<h3>Sub Total:</h3> <span class="glyphicon glyphicon-usd"></span> <strong>{{totalPrice}}</strong>
   	</p>
-	 <ul id="shopping-cart-actions">
-		<li>
-			<input type="submit" name="update" class="btn" value="Update Cart" />
-		</li>
-		<li>
-			<input type="submit" name="delete" class="btn" value="Empty Cart" />
-		</li>
-		<li>
-			<a href="/gamesindex" class="btn"><h6>Continue Shopping <span class="glyphicon glyphicon-plus"></span></h6></a>
-		</li>
-		<li>
-			<a href="/checkout" class="btn"><h6>Go to Checkout <span class="glyphicon glyphicon-check"></span></h6></a>
-		</li>
-	 </ul>
+
+   {{#if currentUser}}
+     <div>
+       <a href="/buy" class="btn btn-primary">
+         <i class="glyphicon glyphicon-shopping-cart"></i>
+         Continue shopping
+       </a>
+     </div>
+    <div>
+      <a href="/checkout" class="btn btn-primary">
+        <i class="glyphicon glyphicon-check" ></i>
+        Go to checkout
+      </a>
+    </div>
+  {{else}}
+    <p><h4 style="color:red;">You need to log in to purchase :/</h4></p>
+  {{/if}}
   </form>
 </template>

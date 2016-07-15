@@ -33,14 +33,6 @@ FlowRouter.route('/cart', {
   }
 })
 
-FlowRouter.route('/gamesindex',
-{
-  name: 'gamesindex',
-  action()
-  {
-    BlazeLayout.render('MainLayout', {main: 'Gamesindex'});
-  }
-})
 
 FlowRouter.route('/checkout',
 {

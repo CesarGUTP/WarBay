@@ -2,8 +2,8 @@
   <div class="container">
     <div class="jumbotron">
       <div class="container">
-        <h2>Search</h2>
-        <p>Find the game would you like!</p>
+         <h1>Games</h1>
+        <!-- <p>Find the game would you like!</p>
         <form>
           <div class="form-group">
             <label for="usr">Name:</label>
@@ -17,15 +17,43 @@
               Advance search
             </button>
               <ul class="dropdown-menu" role="menu">
-                <li><input class="btn btn-default" type="button" id="new-jsid" value="New"></li>
-                <li><input class="btn btn-default" type="button" id="used-jsid" value="Used"></li>
+                <li><a class="btn btn-default" id="new-jsid" href="/gamesindex">New</a></li>
+                <li><a class="btn btn-default" id="used-jsid" href="/gamesindex">Used</a></li>
               </ul>
           </div>
-        </form>
+        </form> -->
+
+          {{#each show_games}}
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="product_image">
+                    <div class="jumbotron jumbotron-icon">
+                        <div class="container" id="icon-container">
+                            <div class="info-icons">
+                                <img src={{file}} style="width:110px; height:170px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" id="product_description">
+                    <div class="description">{{desc}}<br>
+                      <br>
+                      <i>{{price}}</i>
+                      <br>
+                      <input type="button" id="info-js" value="Info" class="btn btn-primary"/>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                   <input type="button" id="addc-js" class="btn btn-raised btn-info" value="Add to cart"/>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{> defaultBootstrapPaginator pagination=templatePagination limit=5 containerClass="text-center"}}
       </div>
     </div>
-    <div id="advtemple" style="display: None">
+    <!-- <div id="advtemple" style="display: None">
       {{>Advsrch}}
-    </div>
+    </div> -->
   </div>
 </template>

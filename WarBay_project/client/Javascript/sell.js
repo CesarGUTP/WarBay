@@ -21,7 +21,6 @@ myspace.setEmpty = function(event_event)
 Template.Sell.events({
   'submit form' : function(event){
     event.preventDefault();
-    alert("funct");
      var nam_sell=event.target.namg_sell.value;
      var pdesc=event.target.pubDesc.value;
      var rate_s=event.target.rate_ht.value;
@@ -32,9 +31,9 @@ Template.Sell.events({
      var imgdir=event.target.imgdir_ht.value;
      var current_user=Meteor.user().username;
      var actual_user=Meteor.userId();
-     if(actual_user != null)
+     if(actual_user !== null)
      {
-       if (current_user != "cesarAdmin" || current_user != "ennioAdmin")
+       if (current_user !== "cesarAdmin" || current_user !== "ennioAdmin")
        {
          Meteor.call('add_ugame', nam_sell, pdesc, rate_s, genre_s, current_user, email_s, phone_s, price_s, imgdir);
          alert("Game published!");
@@ -42,7 +41,7 @@ Template.Sell.events({
        }
        else
        {
-          Meteor.call('add_ngame', nam_sell, pdesc, rate_s, genre_s, email_s, phone_s, price_s, imgdir);
+          Meteor.call('add_ngame', nam_sell, pdesc, rate_s, current_user, genre_s, email_s, phone_s, price_s, imgdir);
           alert("Game published as administrator!");
           myspace.setEmpty(event);
        }

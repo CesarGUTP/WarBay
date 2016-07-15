@@ -12,7 +12,7 @@ Meteor.methods(
 {'add_ugame':function(nam, desc, rate, gen, userid, ema, num, pr, img_src)
   {
     var userl=Meteor.userId();
-    if(userl)
+    if(userl != null)
     {
       usd_games.insert(
       {
@@ -32,26 +32,41 @@ Meteor.methods(
       throw new Meteor.Error(01, "The user must be loged in to publish");
     }
   },
-  
-  'add_ngame':function(nam, desc, rate, gen, userid, ema, num, pr, img_src)
+
+  // 'add_ngame':function(nam, desc, rate, gen, userid, ema, num, pr, img_src)
+  // {
+  //   var userl=Meteor.userId();
+  //   if(userl)
+  //   {
+  //     new_games.insert(
+  //     {
+  //       name: nam,
+  //       desc: desc,
+  //       rating: rate,
+  //       genre: gen,
+  //       user: userid,
+  //       email: ema,
+  //       phone: num,
+  //       price: pr,
+  //       file: img_src,
+  //     });
+  //   }
+  //   else
+  //   {
+  //     throw new Meteor.Error(02, "You need to be logged in to publish");
+  //   }
+  // },
+
+  'find_game': function(nam)
   {
-    var userl=Meteor.userId();
-    if(userl)
-    {
-      new_games.insert(
-      {
-        name: nam,
-        desc: desc,
-        rating: rate,
-        genre: gen,
-        user: userid,
-        phone: num,
-        price: pr,
-        file: img_src,
-      });
-    }
-    else
-    {
-      throw new Meteor.Error(02, "You need to be logged in to publish");
-    }
+    return usd_games.find({name: nam});
+  }
+});
+
+Meteor.publish('pub_ug', function() {
+  return usd_games.find();
+});
+
+Meteor.publish('pub_ug2', function(nam){
+  return usd_games.find({name: nam})
 });

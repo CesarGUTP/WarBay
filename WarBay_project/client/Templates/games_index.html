@@ -6,16 +6,12 @@
            <h3 class="panel-title">Game</h3> <!--Need a "for each" -->
          </div>
          <div class="panel-body">
-           {{#each new_games}}
-            {{_id}}
+           {{#each show_search}}
             {{name}}
-           {{/each}}
-           {{#each usd_games}}
-            {{_id}}
-            {{name}}
+            {{price}}
            {{/each}}
            <br>
-           <input type="submit" class="btn btn-raised btn-info" value="Add to cart">
+           <input type="button" id="addc-js" class="btn btn-raised btn-info" value="Add to cart">
          </div>
       </form>
     </div>
