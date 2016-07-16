@@ -36,15 +36,19 @@
                     </div>
                 </div>
                 <div class="panel-body" id="product_description">
-                    <div class="description">{{desc}}<br>
+                    <div class="description">{{name}}<br>
                       <br>
-                      <i>{{price}}</i>
+                      <i class="glyphicon glyphicon-usd">{{price}}</i>
                       <br>
                       <input type="button" id="info-js" value="Info" class="btn btn-primary"/>
                     </div>
                 </div>
                 <div class="panel-footer">
-                   <input type="button" id="addc-js" class="btn btn-raised btn-info" value="Add to cart"/>
+                   <!-- <button type="button" id="addc-js" class="btn btn-raised btn-info" data-content="Game added" data-toggle="snackbar" data-timeout="4000">Add to cart</button> -->
+                   <a href="/cart" id="addc-js" class="btn btn-raised btn-info">
+                     <i class="glyphicon glyphicon-shopping-cart"></i>
+                     Add to cart
+                   </a>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ Template.Buy.helpers({
   show_games: ()=> {
     return usd_games.find();
   },
-  'desc': function()
+  'desc': ()=>
   {
     return Session.get('description');
   },
@@ -26,12 +26,12 @@ Template.Buy.events({
   {
     event.preventDefault();
     Meteor.call('find_game', desc);
-    var name=usd_games.findOne({name});
-    var rate=usd_games.findOne({rate: ""});
-    var genre=usd_games.findOne({genre: ""});
-    var phone=usd_games.findOne({phone: ""});
-    var user=usd_games.findOne({owner: ""});
-    var email=usd_games.findOne({email: ""});
+    // var name=usd_games.findOne({name});
+    // var rate=usd_games.findOne({rate: ""});
+    // var genre=usd_games.findOne({genre: ""});
+    // var phone=usd_games.findOne({phone: ""});
+    // var user=usd_games.findOne({owner: ""});
+    // var email=usd_games.findOne({email: ""});
     alert(
       "Game Information:"+"\n\n"+
       "Game: "+ name +"\n"+
@@ -44,12 +44,12 @@ Template.Buy.events({
   },
   "click #addc-js": function(event, template)
   {
-    alert("Adding to cart...")
     Cart.add(
     {
-      relationType: 'usd_games',
-      relationId: template.data._id._str,
-      quantity: 1
+      relationType: 'u_g',
+      relationId: this._id,
+      quantity: 1,
     });
+    alert("Game added");
   },
 });
