@@ -14,10 +14,6 @@ Template.Cart.helpers({
     return items;
   },
 
-  numItems: function(){
-    return Cart.numItems();
-  },
-
   totalPrice: function() {
     var price = 0;
     Cart.items().forEach(function(item) {
@@ -25,20 +21,17 @@ Template.Cart.helpers({
       price += item.quantity * product.price;
     });
     return price;
-  }
+  },
 });
 
 
 Template.Cart.events({
-  "click #check-js": function(event, template){
-    alert("Buying...");
-    Cart.empty();
-  },
   "click #remove-js": function()
   {
     Cart.remove(this._id);
     alert("item removed");
   },
+
   "click #emptyc-js": function()
   {
     Cart.empty();

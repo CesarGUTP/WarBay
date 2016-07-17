@@ -8,4 +8,8 @@ Template.MainLayout.onCreated(function MainLayoutOnCreated() {
   {
     passwordSignupFields: 'USERNAME_ONLY',
   });
+  var handler = StripeCheckout.configure({
+		key: 'YOUR_PUBLISHABLE_KEY',
+		token: function(token) {}
+	});
 });
